@@ -1,0 +1,36 @@
+[System]
+Name='SubtractiveClusteringFIS'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=4
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='in1'
+Range=[1 100]
+NumMFs=4
+MF1='in1cluster1':'gaussmf',[17.5008928343671 66]
+MF2='in1cluster2':'gaussmf',[17.5008928343671 21]
+MF3='in1cluster3':'gaussmf',[17.5008928343671 97]
+MF4='in1cluster4':'gaussmf',[17.5008928343671 23]
+
+[Output1]
+Name='out1'
+Range=[214 2175]
+NumMFs=4
+MF1='out1cluster1':'linear',[-26.3444348112805 2738.76423229419]
+MF2='out1cluster2':'linear',[6391.25103217023 1741744.28214966]
+MF3='out1cluster3':'linear',[2.69784068938536 783.370603915976]
+MF4='out1cluster4':'linear',[5868.50836758387 -2009480.57164107]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
+4, 4 (1) : 1
